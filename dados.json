@@ -1,0 +1,52 @@
+{
+  "atualizadoEm": "2026-08-19T21:00:00.000Z",
+  "ativos": {
+    "MXRF11": {
+      "preco": 9.26,
+      "variacaoDia": 0,
+      "nome": "MXRF11",
+      "pl": null,
+      "lpa": null,
+      "fonte": "inicial (manual)",
+      "atualizadoEm": "2026-08-19T21:00:00.000Z"
+    },
+    "BCRI11": {
+      "preco": 57.97,
+      "variacaoDia": 0,
+      "nome": "BCRI11",
+      "pl": null,
+      "lpa": null,
+      "fonte": "inicial (manual)",
+      "atualizadoEm": "2026-08-19T21:00:00.000Z"
+    },
+    "BBAS3": {
+      "preco": 18.11,
+      "variacaoDia": 0,
+      "nome": "BBAS3",
+      "pl": null,
+      "lpa": null,
+      "fonte": "inicial (manual)",
+      "atualizadoEm": "2026-08-19T21:00:00.000Z"
+    },
+    "BBDC3": {
+      "preco": 14.12,
+      "variacaoDia": 0,
+      "nome": "BBDC3",
+      "pl": null,
+      "lpa": null,
+      "fonte": "inicial (manual)",
+      "atualizadoEm": "2026-08-19T21:00:00.000Z"
+    },
+    "CMIG4": {
+      "preco": 10.17,
+      "variacaoDia": 0,
+      "nome": "CMIG4",
+      "pl": null,
+      "lpa": null,
+      "fonte": "inicial (manual)",
+      "atualizadoEm": "2026-08-19T21:00:00.000Z"
+    }
+  },
+  "falhas": [],
+  "aviso": "Valores iniciais capturados manualmente do StatusInvest em 19/08/2026. O robô sobrescreve tudo na primeira execução."
+}

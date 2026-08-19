@@ -1,0 +1,48 @@
+name: Atualizar carteira
+
+on:
+  # A cada 15 minutos, das 13h às 21h UTC = 10h às 18h de Brasília,
+  # de segunda a sexta. Fora do pregão não faz sentido gastar cota.
+  schedule:
+    - cron: '*/15 13-21 * * 1-5'
+  # Botão "Run workflow" na aba Actions, para atualizar na hora
+  workflow_dispatch:
+  # Toda vez que você editar carteira.json, atualiza na hora
+  push:
+    paths:
+      - 'carteira.json'
+
+permissions:
+  contents: write
+
+# Evita duas execuções pisando uma na outra
+concurrency:
+  group: atualizar-carteira
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Buscar cotações
+        env:
+          BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+        run: node scripts/atualizar.mjs
+
+      - name: Salvar resultado
+        run: |
+          git config user.name  "robo-carteira"
+          git config user.email "actions@github.com"
+          git add dados.json historico.json
+          if git diff --staged --quiet; then
+            echo "Nada mudou desde a última execução."
+          else
+            git commit -m "dados: $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

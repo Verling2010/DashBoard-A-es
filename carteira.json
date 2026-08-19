@@ -1,0 +1,61 @@
+{
+  "_leia": "Este é o ÚNICO arquivo que você edita. O robô nunca escreve aqui. Edite direto pelo site do GitHub (botão do lápis) — pelo computador ou pelo celular.",
+
+  "_campos": {
+    "ticker": "código na B3, sem espaços",
+    "tipo": "ACAO ou FII",
+    "corretora": "só um rótulo seu, para saber onde está",
+    "setor": "usado nos alertas de concentração",
+    "quantidade": "quantas cotas você tem",
+    "precoMedio": "quanto pagou por cota, em média. Use 4 casas decimais",
+    "rendimentoMensal": "SÓ PARA FII: rendimento médio por cota, dos últimos 12 ou 24 meses",
+    "dividendoAnual": "SÓ PARA AÇÃO: dividendo por ação nos últimos 12 meses. Deixe null para o robô calcular pelo DY",
+    "dividendo3anos": "SÓ PARA AÇÃO: média por ação dos últimos 3 anos. É o que a fórmula de Bazin pede. null = usa os 12 meses",
+    "lpa": "SÓ PARA AÇÃO: lucro por ação. Alimenta o Preço Justo de Graham",
+    "vpa": "SÓ PARA AÇÃO: valor patrimonial por ação. Alimenta o Preço Justo de Graham",
+    "pvp": "preço sobre valor patrimonial. Se o robô conseguir buscar, ele sobrescreve",
+    "proventosRecebidos": "total em R$ que você já recebeu deste ativo desde a compra"
+  },
+
+  "ativos": [
+    {
+      "ticker": "MXRF11", "tipo": "FII", "corretora": "A+B", "setor": "FII de papel",
+      "quantidade": 6585, "precoMedio": 9.4334,
+      "rendimentoMensal": 0.0978, "pvp": 1.00,
+      "proventosRecebidos": 9190.32
+    },
+    {
+      "ticker": "BCRI11", "tipo": "FII", "corretora": "A", "setor": "FII de papel",
+      "quantidade": 383, "precoMedio": 65.4900,
+      "rendimentoMensal": 0.809, "pvp": 0.68,
+      "proventosRecebidos": 5052.30
+    },
+    {
+      "ticker": "BBAS3", "tipo": "ACAO", "corretora": "B", "setor": "Bancos",
+      "quantidade": 1900, "precoMedio": 19.8069,
+      "dividendoAnual": 0.5505, "dividendo3anos": null,
+      "lpa": 2.68, "vpa": 32.47, "pvp": 0.56,
+      "proventosRecebidos": 0
+    },
+    {
+      "ticker": "BBDC3", "tipo": "ACAO", "corretora": "B", "setor": "Bancos",
+      "quantidade": 501, "precoMedio": 14.6377,
+      "dividendoAnual": 1.4191, "dividendo3anos": null,
+      "lpa": 2.32, "vpa": 17.11, "pvp": 0.83,
+      "proventosRecebidos": 0
+    },
+    {
+      "ticker": "CMIG4", "tipo": "ACAO", "corretora": "B", "setor": "Energia",
+      "quantidade": 500, "precoMedio": 10.8000,
+      "dividendoAnual": 0.8238, "dividendo3anos": null,
+      "lpa": 1.61, "vpa": 10.20, "pvp": 1.00,
+      "proventosRecebidos": 0
+    }
+  ],
+
+  "config": {
+    "metaAporteMensal": 2000,
+    "alertaConcentracaoAtivo": 25,
+    "alertaConcentracaoSetor": 35
+  }
+}
