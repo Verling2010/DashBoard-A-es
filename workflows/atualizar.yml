@@ -1,4 +1,4 @@
-name: Atualizar carteira
+name: .github/workflows/atualizar.yml
 
 on:
   # A cada 15 minutos, das 13h às 21h UTC = 10h às 18h de Brasília,
